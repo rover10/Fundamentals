@@ -20,4 +20,21 @@ void divideArray(int *arr, int start, int end){
 	divideArray(arr, mid+1, end);
 }
 
+=====================C++=========================
+#include<iostream>
+using namespace std;
 
+void divideArray(int *arr, int start, int end){
+        int  mid = (end - start)/2 +start;
+	        if(start==end){
+		        	cout<<start<<end<<endl;
+				        	return;
+						        }
+							            
+								            divideArray(arr, start, mid);
+									            divideArray(arr, mid+1, end);
+
+										    }
+
+										int main(){									    	int arr1[10];									int arr2[11];									divideArray(arr1,0,9);								divideArray(arr2,0,10);								cout<<"Test Passed";
+										}
