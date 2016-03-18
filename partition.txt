@@ -1,0 +1,23 @@
+The basic condition for recursively divinding an array such that at some point <START> as well as <END> point become same is.
+
+mid= (end - start)/2 + start;
+
+LeftPart(start, mid)
+RightPart(mid+1, end)
+
+Base condition to stop is (start == end)
+
+
+
+
+Eg.
+
+void divideArray(int *arr, int start, int end){
+	int  mid = (end - start)/2 +start;
+	if(start==end)
+		return;
+	divideArray(arr, start, mid);
+	divideArray(arr, mid+1, end);
+}
+
+
